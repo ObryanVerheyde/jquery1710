@@ -65,6 +65,16 @@ $(document).ready(function() {
   $('li:even').css('backgroundColor', 'yellow');
 
   $('#nav').on('click', 'li', function() {
-    $(this).css('backgroundColor', 'red');
+    var li = $(this);
+
+    if (li.css('backgroundColor') === 'yellow') {
+      li.css('backgroundColor', '');
+    } else {
+      li.css('backgroundColor', 'red');
+    }
+  });
+
+  $('#nav li i').on('click', function() {
+    $(this).parent().remove();
   });
 });
