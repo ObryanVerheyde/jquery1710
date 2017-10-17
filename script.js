@@ -28,6 +28,13 @@ console.log($);
 
 
 $(document).ready(function() {
+
+  $('#toggleStyle').on('click', function() {
+    // $(this).toggleClass('myClass');
+    // CHANGER APPARENCE BOUTON
+    $('.test').toggleClass('myClass');
+  });
+
   function colorTasks() {
     $('li:even').css('backgroundColor', '#8DE6DB');
   }
